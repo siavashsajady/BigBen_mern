@@ -1,0 +1,23 @@
+{
+  "name": "bigben_mern",
+  "version": "1.0.0",
+  "description": "MERN shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siavashsajady/BigBen_mern.git"
+  },
+  "author": "Siavash Sajadi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siavashsajady/BigBen_mern/issues"
+  },
+  "homepage": "https://github.com/siavashsajady/BigBen_mern#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
