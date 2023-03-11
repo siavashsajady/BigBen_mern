@@ -26,4 +26,25 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-export { authUser };
+// defines an async function that handles getting a user's profile.
+// The asyncHandler middleware is used to handle errors.
+const getUserProfile = asyncHandler(async (req, res) => {
+  // finds the user based on the ID passed in the request object.
+  const user = await User.findById(req.user._id);
+
+  // If the user is found, their details are returned in the response.
+  if (user) {
+    res.json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      isAdmin: user.isAdmin,
+    });
+  } else {
+    // If the user is not found, a 404 error is returned.
+    res.status(404);
+    throw new Error('User not found');
+  }
+});
+
+export { authUser, getUserProfile };
