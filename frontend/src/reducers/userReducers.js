@@ -2,7 +2,7 @@ import {
   USER_LOGIN_SUCCESS,
   USER_LOGIN_REQUEST,
   USER_LOGIN_FAIL,
-  USER_LOGIN_LOGOUT,
+  USER_LOGOUT,
 } from '../constants/userConstants';
 
 // Reducer function for handling user login actions and updating state
@@ -17,7 +17,7 @@ export const userLoginReducer = (state = {}, action) => {
     case USER_LOGIN_FAIL:
       // Update the state with error message if login request fails
       return { loading: false, error: action.payload };
-    case USER_LOGIN_LOGOUT:
+    case USER_LOGOUT:
       // Reset the state when user logs out
       return {};
     default:
